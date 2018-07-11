@@ -80,6 +80,9 @@ d3.csv("../../data/data.csv", function(err, healthData) {
         })
         .attr("r", "15")
         .attr("fill", "lightgray")
+        .style("stroke-width", ".5")
+        .style("fill-opacity", .5)
+        .style("stroke", "black")
 
         .on("mouseenter", function(data) {
             toolTip.show(data);
@@ -91,7 +94,7 @@ d3.csv("../../data/data.csv", function(err, healthData) {
 
     chart.append("text")
         .style("text-anchor", "middle")
-        .style("font-size", "12px")
+        .style("font-size", "10px")
         .selectAll("tspan")
         .data(healthData)
         .enter()
